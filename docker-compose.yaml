@@ -1,0 +1,14 @@
+version: '2'
+services:
+
+  mock:
+    user: root
+    build: .
+    restart: always
+    container_name: mock
+    environment:
+      - SERVICE_NAME=mock
+      - NODE_ENV=developemnt
+    ports:
+      - "8080:8080"
+    command: ["npm", "start"]
