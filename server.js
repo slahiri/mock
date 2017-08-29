@@ -11,9 +11,19 @@ var port = process.env.PORT || 8080;
 
 var router = express.Router();
 
-router.get('/', function(req, res) {
-    res.json({ message: 'hooray! welcome to our api!' });   
+
+
+router.get('/test1', function(req, res) {
+    res.json({ message: 'test-get' });
 });
+
+router.post('/test2', function(req, res) {
+    res.json({ message: 'test-post's });   
+});
+
+
+
+
 
 app.use('/api', router);
 
